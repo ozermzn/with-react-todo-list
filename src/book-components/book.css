@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap");
+
+* {
+  transition: all 0.3s ease;
+  font-family: "Rubik Bubbles", cursive;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 2rem;
+}
+.card {
+  box-shadow: 5px 8px 24px -5px white;
+  color: #eee;
+  font-weight: 700;
+  border: none;
+}
+.card-body {
+  background-color: black;
+  border: none;
+}
+.card-text {
+  margin-bottom: 0;
+}
+.input-group {
+  width: 50%;
+}
+#floatingInput {
+  background-color: #000;
+  color: #eee;
+}
+.d-flex {
+  align-items: center;
+}
+.edit-span-button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.edit-span-button:hover {
+  opacity: 0.5;
+}
+
+.book-create-style {
+  background: url("../img/bg-1.jpg");
+  background-position: bottom;
+  background-size: cover;
+
+  width: 100% !important;
+}
+.book-create-style .btn {
+  background-color: #60a6c4;
+  border: none;
+}
+.book-create-style h2 {
+  color: #60a6c4;
+}
+.book-create-style input {
+  opacity: 0.9;
+}
+.book-create-style input:focus {
+  border: 2px solid #60a6c4;
+  opacity: 1;
+}
+.book-create-style .img-pin {
+  width: 45px;
+}
+
+.book-list {
+  position: absolute;
+  background: #000;
+  height: 80% !important;
+  width: 100%;
+  box-shadow: 10px 4px 20px 8px black;
+}
+@media screen and (max-width: 750px) {
+  * {
+    font-size: 10px;
+  }
+  .input-group {
+    width: 100% !important;
+  }
+  .book-list {
+    grid-template-columns: repeat(2, 2fr);
+  }
+  .button-flex {
+    flex-direction: column;
+  }
+  .button-flex .btn {
+    padding: 5px;
+  }
+  .container-sm {
+    height: 10px;
+  }
+}
