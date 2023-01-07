@@ -1,3 +1,7 @@
+#In this project, I effectively used the useState extension of React to implement add, delete, and edit functions.
+
+#My first react project.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
