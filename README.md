@@ -1,6 +1,6 @@
-# In this project, I effectively used the useState extension of React to implement add, delete, and edit functions.
+# In this project, I effectively used the useState extension of React to implement add, delete, and edit functions. :wave:
 
-# My first react project.
+# My first react project. :blush:
 
 # Getting Started with Create React App
 
