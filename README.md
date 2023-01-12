@@ -1,3 +1,9 @@
+# In this project, I effectively used the useState extension of React to implement add, delete, and edit functions. :wave:
+
+# Overview: https://react-todoo-list.netlify.app/  :point_left:
+
+# My first react project. :blush:
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
