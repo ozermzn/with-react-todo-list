@@ -1,14 +1,16 @@
 import { useState } from "react";
+import useBookContext from "../hooks/use-books-context";
 
-const BookEdit = ({ onSubmit, book }) => {
+const BookEdit = ({ book, onSubmit }) => {
   const [title, setTitle] = useState("");
-
+  const { editBookById } = useBookContext();
   const handleChange = (event) => {
     setTitle(event.target.value);
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSubmit(book.id, title);
+    editBookById(book.id, title);
+    onSubmit();
   };
   return (
     <div>
@@ -30,6 +32,7 @@ const BookEdit = ({ onSubmit, book }) => {
             <i className="fa-solid fa-check"></i>
           </span>
         </div>
+     
       </form>
     </div>
   );

@@ -1,15 +1,17 @@
 import { useState } from "react";
+import useBookContext from "../hooks/use-books-context";
 import pin from "../img/pin.png";
 
-const BookCreate = ({ onCreate }) => {
+const BookCreate = () => {
   const [title, setTitle] = useState("");
+  const { handleCreateBook } = useBookContext();
 
   const handleInput = (event) => {
     setTitle(event.target.value);
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    onCreate(title);
+    handleCreateBook(title);
     setTitle("");
   };
   return (

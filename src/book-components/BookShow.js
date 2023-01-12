@@ -1,16 +1,20 @@
 import { useState } from "react";
+import useBookContext from "../hooks/use-books-context";
 import BookEdit from "./BookEdit";
+import pin from "../img/pin-dynamic-clay.png";
 
-const BookShow = ({ book, onRemove, onEdit }) => {
+const BookShow = ({ book }) => {
   const [showEdit, setShowEdit] = useState(false);
+
+  const { removeBookById } = useBookContext();
+
   const handleRemoveClick = () => {
-    onRemove(book.id);
+    removeBookById(book.id);
   };
   const handleEditClick = () => {
     setShowEdit(!showEdit);
   };
-  const handleSubmit = (id, newTitle) => {
-    onEdit(id, newTitle);
+  const handleSubmit = () => {
     setShowEdit(!showEdit);
   };
   const content = () => {
@@ -22,8 +26,8 @@ const BookShow = ({ book, onRemove, onEdit }) => {
   };
   return (
     <div className="container-sm">
-      <div className="card mb-3">
-        <div className="card-body d-flex justify-content-between ">
+      <div className="card mb-3 rounded">
+        <div className="card-body d-flex justify-content-between rounded">
           <div className="card-text">{content()}</div>
           <div className="d-flex gap-3 button-flex">
             <button
@@ -37,6 +41,12 @@ const BookShow = ({ book, onRemove, onEdit }) => {
             </button>
           </div>
         </div>
+        <span
+          id="card-pin"
+          className=" position-absolute top-0 start-0 translate-middle badge "
+        >
+          <img src={pin} className="img-fluid" />
+        </span>
       </div>
     </div>
   );
